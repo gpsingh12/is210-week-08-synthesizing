@@ -1,9 +1,16 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*- 
-"""
+"""Module creates versus matchup for players.
 """
 def get_matches(players):
-    """ 
+    """ Function takes input as a list of players names.
+        Arg:
+            players(list): Input value of players names.
+        Return:
+             returns newly created list of tuples.
+        Examples:
+              >>>  get_matches(['Jim', 'Jay', 'Max'])
+                [('Jim', 'Jay'), ('Jim', 'Max'), ('Jay', 'Max')]
     """
     player = []
     for myind1, myitem1 in enumerate(players):
