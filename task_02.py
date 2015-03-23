@@ -5,7 +5,7 @@
 import authentication
 import getpass
 
-def login(username, maxattempts):
+def login(username, maxattempts = 4):
     """Function takes two inputs from the users to input their username
        and maximum attempts.
        Arg:
@@ -36,10 +36,11 @@ def login(username, maxattempts):
         message = authentication.authenticate(username, password)
         if message:
             authenticated = True
-            break
+        
         else:
-             print userinput.format(maxattempts - counter )
-             counter += 1
+            break
+            print userinput.format(maxattempts - counter )
+            counter += 1
 
     return authenticated
     
