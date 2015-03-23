@@ -1,11 +1,12 @@
- #!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Module 2."""
 
 import authentication
 import getpass
 
-def login(username, maxattempts = 3):
+
+def login(username, maxattempts=3):
     """Function takes two inputs from the users to input their username
        and maximum attempts.
        Arg:
@@ -25,11 +26,8 @@ def login(username, maxattempts = 3):
 
     """
     authenticated = False
-   #maxattempts = 4
-    
     prompt = 'Please enter your password: '
     userinput = "Incorrect username or password. You have" ' {} '  "attempts"
-    
     counter = 1
     while counter <= maxattempts:
         password = getpass.getpass(prompt)
@@ -38,9 +36,7 @@ def login(username, maxattempts = 3):
             authenticated = True
             break
         else:
-            #break
-            print userinput.format(maxattempts - counter )
+            print userinput.format(maxattempts - counter)
             counter += 1
 
     return authenticated
-    
