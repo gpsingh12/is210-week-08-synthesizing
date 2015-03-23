@@ -36,9 +36,9 @@ def login(username, maxattempts = 4):
         message = authentication.authenticate(username, password)
         if message:
             authenticated = True
-        
-        else:
             break
+        else:
+            
             print userinput.format(maxattempts - counter )
             counter += 1
 
